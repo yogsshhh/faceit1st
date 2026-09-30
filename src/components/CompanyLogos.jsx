@@ -1,36 +1,39 @@
 import React, { useState } from 'react';
 
 const LOGO_IMAGE_MAP = {
-  accenture: '/logos/accenture.jpeg',
-  tcs: '/logos/tcs.jpeg',
-  hexaware: '/logos/hexaware.jpeg',
-  mphasis: '/logos/mphasis.jpeg',
-  hcltech: '/logos/hcltech.jpeg',
-  capgemini: '/logos/capgemini.jpeg',
-  techmahindra: '/logos/techmahindra.jpeg',
-  ltimindtree: '/logos/ltimindtree.jpeg',
-  wipro: '/logos/wipro.jpeg',
-  infosys: '/logos/infosys.jpeg',
-  coforge: '/logos/coforge.jpeg',
-  cognizant: '/logos/cognizant.jpeg',
-  virtusa: '/logos/virtusa.jpeg',
-  birlasoft: '/logos/birlasoft.jpeg',
-  persistent: '/logos/persistent.jpeg',
-  ust: '/logos/ust.jpeg',
-  genpact: '/logos/genpact.jpeg',
-  ey: '/logos/ey.jpeg',
-  kpmg: '/logos/kpmg.jpeg',
-  pwc: '/logos/pwc.jpeg',
-  deloitte: '/logos/deloitte.jpeg',
-  ibm: '/logos/ibm.jpeg',
-  cgi: '/logos/cgi.jpeg',
-  dxc: '/logos/dxc.jpeg',
-  zoho: '/logos/zoho.jpg'
+  accenture: './logos/accenture.jpeg',
+  tcs: './logos/tcs.jpeg',
+  hexaware: './logos/hexaware.jpeg',
+  mphasis: './logos/mphasis.jpeg',
+  hcltech: './logos/hcltech.jpeg',
+  capgemini: './logos/capgemini.jpeg',
+  techmahindra: './logos/techmahindra.jpeg',
+  ltimindtree: './logos/ltimindtree.jpeg',
+  wipro: './logos/wipro.jpeg',
+  infosys: './logos/infosys.jpeg',
+  coforge: './logos/coforge.jpeg',
+  cognizant: './logos/cognizant.jpeg',
+  virtusa: './logos/virtusa.jpeg',
+  birlasoft: './logos/birlasoft.jpeg',
+  persistent: './logos/persistent.jpeg',
+  ust: './logos/ust.jpeg',
+  genpact: './logos/genpact.jpeg',
+  ey: './logos/ey.jpeg',
+  kpmg: './logos/kpmg.jpeg',
+  pwc: './logos/pwc.jpeg',
+  deloitte: './logos/deloitte.jpeg',
+  ibm: './logos/ibm.jpeg',
+  cgi: './logos/cgi.jpeg',
+  dxc: './logos/dxc.jpeg',
+  zoho: './logos/zoho.jpg'
 };
 
 export const CompanyLogo = ({ id, size = 42, className = '' }) => {
   const [imgFailed, setImgFailed] = useState(false);
-  const imageSrc = LOGO_IMAGE_MAP[id];
+  const rawSrc = LOGO_IMAGE_MAP[id];
+  const baseUrl = import.meta.env.BASE_URL || './';
+  const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+  const imageSrc = rawSrc ? rawSrc.replace(/^\.\//, cleanBase) : null;
 
   if (imageSrc && !imgFailed) {
     return (
