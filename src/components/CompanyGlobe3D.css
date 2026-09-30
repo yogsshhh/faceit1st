@@ -1,0 +1,106 @@
+/* ==========================================================================
+   3D COMPANY GLOBE STYLES
+   Dark Glassmorphism × Champagne Gold Glow × 3D Orbital Network
+   ========================================================================== */
+
+.globe-3d-root {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+}
+
+@media (min-width: 1200px) {
+  .globe-3d-root {
+    height: 680px;
+  }
+}
+
+@media (max-width: 991px) {
+  .globe-3d-root {
+    height: 480px;
+  }
+}
+
+.globe-webgl-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.globe-cards-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Floating 3D Company Cards */
+.globe-company-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform, opacity;
+  transition: transform 0.12s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card-glass-body {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.85rem 0.45rem 0.55rem;
+  background: rgba(8, 8, 8, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), 0 0 15px rgba(197, 168, 128, 0.08);
+  white-space: nowrap;
+  transition: var(--transition-fast);
+}
+
+.card-comp-name {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+}
+
+/* Hover State */
+.globe-company-card.hovered .card-glass-body {
+  border-color: var(--accent-champagne);
+  background: rgba(18, 18, 18, 0.96);
+  box-shadow: 0 15px 40px -5px rgba(0, 0, 0, 0.95), 0 0 30px rgba(197, 168, 128, 0.45);
+}
+
+.globe-company-card.hovered .card-comp-name {
+  color: var(--accent-champagne);
+}
+
+/* Dimmed Back Cards */
+.globe-company-card.is-back {
+  filter: brightness(0.75);
+}
+
+@media (max-width: 600px) {
+  .globe-3d-root {
+    height: 380px;
+  }
+  .card-glass-body {
+    padding: 0.35rem 0.65rem 0.35rem 0.45rem;
+  }
+  .card-comp-name {
+    font-size: 0.72rem;
+  }
+}

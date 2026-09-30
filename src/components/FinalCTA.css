@@ -1,0 +1,52 @@
+.final-cta-root {
+  padding: 180px 0 140px 0;
+  background: var(--bg-black);
+  text-align: center;
+}
+
+.final-cta-box {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-eyebrow {
+  font-size: 0.75rem;
+  color: var(--accent-champagne);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+}
+
+.cta-heading {
+  font-size: 4.25rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #FFFFFF;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.cta-subtext {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
+.cta-giant-btn {
+  padding: 1.2rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 860px) {
+  .final-cta-root {
+    padding: 100px 0;
+  }
+  .cta-heading {
+    font-size: 2.75rem;
+  }
+}

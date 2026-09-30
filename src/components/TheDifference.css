@@ -1,0 +1,165 @@
+.difference-root {
+  padding: 160px 0;
+  background: var(--bg-black);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.difference-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4.5rem auto;
+}
+
+.diff-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-champagne);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.diff-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #FFFFFF;
+  margin-bottom: 1.75rem;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.diff-subtitle {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* Interactive Flow Tabs */
+.difference-interactive-flow {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.flow-tabs-header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--border-hairline);
+  margin-bottom: 2rem;
+}
+
+.flow-tab-btn {
+  background: none;
+  border: none;
+  padding: 1.25rem 2rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  position: relative;
+}
+
+.flow-tab-btn .tab-idx {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-champagne);
+}
+
+.flow-tab-btn.active {
+  color: #FFFFFF;
+}
+
+.flow-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-champagne);
+}
+
+.flow-card-stage {
+  background: #0B0B0B;
+  border: 1px solid var(--border-hairline-hover);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.stage-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  background: #141414;
+  border: 1px solid var(--border-hairline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stage-info {
+  flex: 1;
+}
+
+.stage-sub-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-champagne);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.stage-main-title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  margin-bottom: 0.65rem;
+}
+
+.stage-body-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.stage-prog-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--border-hairline);
+}
+
+.prog-fill {
+  height: 100%;
+  background: var(--accent-champagne);
+  transition: width 0.4s ease;
+}
+
+@media (max-width: 860px) {
+  .difference-root {
+    padding: 100px 0;
+  }
+  .diff-title {
+    font-size: 2.75rem;
+  }
+  .flow-card-stage {
+    flex-direction: column;
+    padding: 1.75rem;
+  }
+}

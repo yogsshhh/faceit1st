@@ -1,0 +1,78 @@
+.social-proof-root {
+  padding: 140px 0;
+  background: var(--bg-black);
+  border-top: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.social-quote-box {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote-eyebrow {
+  font-size: 0.75rem;
+  color: var(--accent-champagne);
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
+}
+
+.main-quote-text {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin-bottom: 2.25rem;
+  letter-spacing: -0.03em;
+}
+
+.quote-author-info {
+  margin-bottom: 2.5rem;
+}
+
+.author-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 0.25rem;
+}
+
+.author-meta {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.quote-dots-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.quote-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #222222;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.quote-dot.active {
+  background: var(--accent-champagne);
+  box-shadow: 0 0 10px rgba(197, 168, 128, 0.5);
+  transform: scale(1.2);
+}
+
+@media (max-width: 860px) {
+  .social-proof-root {
+    padding: 90px 0;
+  }
+  .main-quote-text {
+    font-size: 1.75rem;
+  }
+}

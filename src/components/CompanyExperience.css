@@ -1,0 +1,214 @@
+.company-exp-root {
+  padding: 140px 0;
+  background: var(--bg-black);
+}
+
+.company-exp-header {
+  margin-bottom: 3.5rem;
+}
+
+.exp-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-champagne);
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.exp-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -0.04em;
+}
+
+/* Horizontal Monochrome Selector */
+.monochrome-company-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.mono-company-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--border-hairline);
+  cursor: pointer;
+  transition: opacity 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.mono-wordmark {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #666666;
+  letter-spacing: -0.03em;
+  transition: color 0.3s ease;
+}
+
+.mono-action {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-champagne);
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.mono-company-item:hover .mono-wordmark,
+.mono-company-item.selected .mono-wordmark {
+  color: #FFFFFF;
+}
+
+.mono-company-item.selected .mono-wordmark {
+  color: var(--accent-champagne);
+}
+
+.mono-company-item:hover .mono-action,
+.mono-company-item.selected .mono-action {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mono-company-item.dimmed {
+  opacity: 0.25;
+}
+
+/* More Companies Button Trigger */
+.more-companies-trigger-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+
+.show-all-companies-btn {
+  padding: 0.9rem 1.75rem;
+  font-size: 0.9rem;
+  border-color: rgba(197, 168, 128, 0.3);
+  color: var(--accent-champagne);
+  gap: 0.75rem;
+}
+
+.show-all-companies-btn:hover {
+  background: rgba(197, 168, 128, 0.1);
+  border-color: var(--accent-champagne);
+}
+
+/* Interactive Preview Window */
+.company-preview-window {
+  background: #0B0B0B;
+  border: 1px solid var(--border-hairline-hover);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.9);
+}
+
+.preview-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-hairline);
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.preview-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preview-company-name {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1.1;
+  margin-bottom: 0.2rem;
+}
+
+.preview-pills {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.pill-role {
+  color: var(--accent-champagne);
+  font-weight: 700;
+}
+
+.pill-type {
+  color: var(--text-secondary);
+}
+
+.preview-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.module-item {
+  background: #111111;
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  transition: var(--transition-fast);
+}
+
+.module-item:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: #161616;
+}
+
+.module-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.65rem;
+}
+
+.mod-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-champagne);
+  font-weight: 700;
+}
+
+.mod-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.mod-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .company-exp-root {
+    padding: 90px 0;
+  }
+  .exp-title {
+    font-size: 2.2rem;
+  }
+  .mono-wordmark {
+    font-size: 1.6rem;
+  }
+  .mono-action {
+    display: none;
+  }
+}

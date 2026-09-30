@@ -1,0 +1,183 @@
+/* ==========================================================================
+   HERO SECTION — 3D GLOBE EDITION
+   Theme: Pitch Black (#000000) × Warm Metallic Champagne (#C5A880)
+   ========================================================================== */
+
+.hero-section-root {
+  min-height: 100vh;
+  padding: 120px 0 60px 0;
+  background: var(--bg-black);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 2-Column Desktop Grid — Mobile First Stack */
+.hero-layout-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .hero-layout-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+
+/* Left Column Editorial Copy */
+.hero-editorial-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: clamp(0.68rem, 2.5vw, 0.75rem);
+  font-weight: 700;
+  color: var(--accent-champagne);
+  letter-spacing: 0.12em;
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow-line {
+  width: 24px;
+  height: 1px;
+  background: var(--accent-champagne);
+}
+
+/* Huge Responsive Headline using clamp() */
+.hero-display-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 6.5vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1.04;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.04em;
+  word-break: break-word;
+}
+
+.hero-support-text {
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+/* CTA Group */
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .hero-cta-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.hero-primary-btn {
+  width: 100%;
+  padding: 1.05rem 2rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 640px) {
+  .hero-primary-btn {
+    width: auto;
+  }
+}
+
+.explore-sublink {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: var(--transition-fast);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.explore-sublink:hover {
+  color: var(--accent-champagne);
+}
+
+/* Trust Indicator */
+.hero-trust-indicator {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: clamp(0.75rem, 2.2vw, 0.82rem);
+  color: var(--text-dim);
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+.trust-icon {
+  color: var(--accent-champagne);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Right Column — 3D Globe (Desktop Only, Hidden on Mobile for Performance) */
+.hero-globe-col {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide 3D Globe entirely on Mobile / Tablet for ultra-smooth experience */
+@media (max-width: 991px) {
+  .hero-globe-col {
+    display: none !important;
+  }
+  .hero-section-root {
+    min-height: auto;
+    padding: 100px 0 60px 0;
+  }
+}
+
+/* Desktop positioning: shifted slightly to the right */
+@media (min-width: 992px) {
+  .hero-globe-col {
+    display: flex !important;
+    margin-left: 2%;
+    transform: translateX(30px);
+    width: 105%;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

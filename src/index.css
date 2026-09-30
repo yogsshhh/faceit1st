@@ -1,0 +1,313 @@
+/* ==========================================================================
+   INTERVIEWFORGE — WORLD-CLASS PRODUCT LAUNCH DESIGN SYSTEM
+   Theme: Pitch Black (#000000) × Off-White (#F5F5F5) × Warm Metallic Champagne (#C5A880)
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-mono: 'Space Mono', monospace, sans-serif;
+
+  /* Color Palette — Refined Pitch Black & Metallic Gold */
+  --bg-black: #000000;
+  --bg-pitch: #050505;
+  --bg-secondary: #0B0B0B;
+  --bg-card: #111111;
+  --bg-card-hover: #161616;
+
+  --text-primary: #F5F5F5;
+  --text-secondary: #8A8A8A;
+  --text-dim: #555555;
+  --text-dark: #333333;
+
+  /* Accent: Warm Metallic Champagne Gold */
+  --accent-champagne: #C5A880;
+  --accent-champagne-light: #E5C158;
+  --accent-champagne-glow: rgba(197, 168, 128, 0.15);
+  --accent-border: rgba(197, 168, 128, 0.3);
+
+  /* Hairline Borders */
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --border-hairline-hover: rgba(255, 255, 255, 0.2);
+
+  --radius-xs: 2px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-black);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-black);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  letter-spacing: -0.015em;
+}
+
+/* Base HTML Button Reset — Prevents Default OS White Box Buttons */
+button {
+  font-family: var(--font-sans);
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+}
+
+/* Subtle Fine Grain Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 0);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+
+/* Custom Minimal Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-black);
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-champagne);
+}
+
+/* Container & Layout */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Metallic Text Accent */
+.text-champagne {
+  color: var(--accent-champagne);
+}
+
+.text-metallic {
+  background: linear-gradient(135deg, #FFFFFF 0%, #D4AF37 50%, #8A8A8A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Premium Button System */
+.btn, .btn-premium {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.92rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-hairline-hover);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Metallic Champagne Gold Primary Button */
+.btn-metallic, .btn-primary {
+  background: var(--accent-champagne) !important;
+  color: #000000 !important;
+  border-color: var(--accent-champagne) !important;
+  box-shadow: 0 0 25px rgba(197, 168, 128, 0.25) !important;
+}
+
+.btn-metallic:hover, .btn-primary:hover {
+  background: #D9B78F !important;
+  border-color: #D9B78F !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(197, 168, 128, 0.45) !important;
+}
+
+/* Dark Hairline Secondary / Back Button */
+.btn-dark-outline, .btn-secondary {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.btn-dark-outline:hover, .btn-secondary:hover {
+  border-color: var(--accent-champagne) !important;
+  color: var(--accent-champagne) !important;
+  background: rgba(197, 168, 128, 0.08) !important;
+  transform: translateY(-2px);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.btn-lg {
+  padding: 1.1rem 2.2rem;
+  font-size: 1.05rem;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+}
+
+/* Global All Companies Grid Modal System */
+.all-companies-modal {
+  width: 90% !important;
+  max-width: 880px !important;
+  max-height: 85vh !important;
+  background: #050505 !important;
+  border: 1px solid rgba(197, 168, 128, 0.35) !important;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 1), 0 0 60px rgba(197, 168, 128, 0.25) !important;
+  position: relative !important;
+  z-index: 100000 !important;
+  opacity: 1 !important;
+}
+
+.all-companies-modal .modal-header {
+  background: #050505 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 20 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.all-companies-modal .modal-body {
+  max-height: calc(85vh - 75px) !important;
+  overflow-y: auto !important;
+  background: #050505 !important;
+  padding: 1.5rem !important;
+}
+
+.all-companies-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)) !important;
+  gap: 0.9rem !important;
+  padding: 0.25rem !important;
+}
+
+.company-modal-card {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.85rem !important;
+  padding: 0.85rem 1rem !important;
+  background: #0B0B0B !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: var(--radius-sm) !important;
+  cursor: pointer !important;
+  transition: var(--transition-fast) !important;
+}
+
+.company-modal-card:hover {
+  border-color: var(--accent-champagne) !important;
+  background: #121212 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(197, 168, 128, 0.15) !important;
+}
+
+.company-modal-card.active {
+  border-color: var(--accent-champagne) !important;
+  background: rgba(197, 168, 128, 0.1) !important;
+}
+
+.comp-modal-info {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.15rem !important;
+  text-align: left !important;
+}
+
+.comp-modal-title {
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  line-height: 1.2 !important;
+}
+
+.comp-modal-badge {
+  font-size: 0.72rem !important;
+  color: var(--accent-champagne) !important;
+  font-weight: 600 !important;
+}
+
+.comp-select-btn {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  padding: 0.35rem 0.75rem !important;
+  border-radius: var(--radius-xs) !important;
+  cursor: pointer !important;
+  transition: var(--transition-fast) !important;
+  white-space: nowrap !important;
+}
+
+.comp-select-btn:hover {
+  background: var(--accent-champagne) !important;
+  color: #000000 !important;
+  border-color: var(--accent-champagne) !important;
+}
+
+@media (max-width: 580px) {
+  .all-companies-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Smooth Fade & Slide Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
