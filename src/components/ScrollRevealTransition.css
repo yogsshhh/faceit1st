@@ -66,9 +66,20 @@
 
 @media (max-width: 860px) {
   .reveal-section-root {
-    padding: 100px 0;
+    padding: 75px 0;
   }
   .reveal-huge-headline {
-    font-size: 2.75rem;
+    font-size: 2.1rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  .reveal-quote {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+  .reveal-btn-interactive {
+    width: 100%;
+    font-size: 0.92rem;
+    padding: 0.9rem 1.25rem;
   }
 }

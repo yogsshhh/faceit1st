@@ -629,3 +629,56 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 0.5rem !important;
+  }
+  .modal-container {
+    max-height: 92vh !important;
+  }
+  .modal-header {
+    padding: 0.9rem 1rem !important;
+  }
+  .modal-title-box h3 {
+    font-size: 1.05rem !important;
+  }
+  .wizard-progress-bar {
+    padding: 0.65rem 0.85rem !important;
+  }
+  .step-label {
+    font-size: 0.72rem !important;
+  }
+  .progress-line {
+    margin: 0 0.35rem !important;
+  }
+  .modal-body {
+    padding: 1.15rem 0.85rem !important;
+  }
+  .company-banner-box {
+    padding: 0.85rem !important;
+    gap: 0.75rem !important;
+  }
+  .options-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .form-actions {
+    flex-direction: column-reverse !important;
+    gap: 0.65rem !important;
+  }
+  .form-actions button {
+    width: 100% !important;
+  }
+  .checkout-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .receipt-details-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .success-actions {
+    flex-direction: column !important;
+  }
+  .success-actions button {
+    width: 100% !important;
+  }
+}

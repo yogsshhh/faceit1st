@@ -203,14 +203,29 @@
 
 @media (max-width: 960px) {
   .three-stage-root {
-    padding: 90px 0;
+    padding: 70px 0;
   }
   .stage-block-item {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-    margin-bottom: 80px;
+    gap: 2rem;
+    margin-bottom: 60px;
+  }
+  .stage-number {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
   }
   .stage-heading {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
+    line-height: 1.1;
+    margin-bottom: 0.85rem;
+  }
+  .stage-lead {
+    font-size: 1.05rem;
+  }
+  .stage-body {
+    font-size: 0.92rem;
+  }
+  .frame-body-box {
+    padding: 1.15rem;
   }
 }

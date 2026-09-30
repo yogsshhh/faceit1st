@@ -296,9 +296,71 @@ h1, h2, h3, h4, .font-display {
   border-color: var(--accent-champagne) !important;
 }
 
-@media (max-width: 580px) {
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.15rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-overlay {
+    padding: 0.5rem !important;
+  }
+
+  .all-companies-modal {
+    width: 96% !important;
+    max-height: 92vh !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .all-companies-modal .modal-header {
+    padding: 0.9rem 1rem !important;
+  }
+
+  .all-companies-modal .modal-title-box h3 {
+    font-size: 1.05rem !important;
+  }
+
+  .all-companies-modal .modal-subtitle {
+    font-size: 0.75rem !important;
+  }
+
+  .all-companies-modal .modal-body {
+    max-height: calc(92vh - 60px) !important;
+    padding: 0.85rem 0.65rem !important;
+  }
+
   .all-companies-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
+    gap: 0.65rem !important;
+  }
+
+  .company-modal-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 0.4rem !important;
+    padding: 0.75rem 0.5rem !important;
+  }
+
+  .comp-modal-info {
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .comp-modal-title {
+    font-size: 0.85rem !important;
+  }
+
+  .comp-modal-badge {
+    font-size: 0.68rem !important;
+  }
+
+  .comp-select-btn {
+    width: 100% !important;
+    padding: 0.35rem 0 !important;
+    font-size: 0.72rem !important;
+    text-align: center !important;
   }
 }
 
