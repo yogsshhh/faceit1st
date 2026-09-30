@@ -41,7 +41,7 @@ export const HowItWorks = ({ onBookClick }) => {
           <div className="section-badge">
             <span>Simple 4-Step Process</span>
           </div>
-          <h2 className="section-heading">How InterviewForge Works</h2>
+          <h2 className="section-heading">How FACEIT1ST Works</h2>
           <p className="section-subtitle">
             From booking to detailed scorecard — here is how we prepare you for final placement success.
           </p>

@@ -21,7 +21,7 @@ export const MyBookingsModal = ({ onClose }) => {
 
   const handleDownloadPass = (booking) => {
     const content = `===========================================
-INTERVIEWFORGE MOCK INTERVIEW PASS
+FACEIT1ST MOCK INTERVIEW PASS
 ===========================================
 Booking Ref ID: ${booking.id}
 Company:        ${booking.company}
@@ -37,7 +37,7 @@ Your mentor details and room link have been generated.
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `InterviewForge_Pass_${booking.id}.txt`;
+    link.download = `FACEIT1ST_Pass_${booking.id}.txt`;
     link.click();
   };
 

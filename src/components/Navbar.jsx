@@ -27,7 +27,7 @@ export const Navbar = ({ onOpenBooking, onOpenLogin, user }) => {
       <div className="container navbar-inner">
         {/* Brand Logo */}
         <div className="navbar-brand" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <span className="brand-wordmark">INTERVIEWFORGE</span>
+          <span className="brand-wordmark">FACEIT<span style={{ color: 'var(--accent-champagne)' }}>1ST</span></span>
         </div>
 
         {/* Desktop Links */}
@@ -69,7 +69,7 @@ export const Navbar = ({ onOpenBooking, onOpenLogin, user }) => {
       {mobileMenuOpen && (
         <div className="mobile-overlay-menu fade-in-up">
           <div className="mobile-overlay-header">
-            <span className="brand-wordmark">INTERVIEWFORGE</span>
+            <span className="brand-wordmark">FACEIT<span style={{ color: 'var(--accent-champagne)' }}>1ST</span></span>
             <button className="close-overlay-btn" onClick={() => setMobileMenuOpen(false)}>
               <X size={26} color="#FFFFFF" />
             </button>

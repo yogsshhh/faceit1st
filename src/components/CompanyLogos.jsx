@@ -121,7 +121,7 @@ export const BrandLogo = ({ size = 36 }) => {
         color: '#FFFFFF',
         letterSpacing: '-0.03em'
       }}>
-        INTERVIEW<span style={{ color: '#C5A880' }}>FORGE</span>
+        FACEIT<span style={{ color: '#C5A880' }}>1ST</span>
       </span>
     </div>
   );

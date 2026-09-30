@@ -405,7 +405,7 @@ export const BookingModal = ({ initialCompanyId, onClose, onBookingComplete }) =
                       <div className="upi-demo-box fade-in">
                         <div className="mock-qr-wrapper">
                           <img 
-                            src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=upi://pay?pa=interviewforge@upi&pn=InterviewForge&am=499" 
+                            src="https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=upi://pay?pa=faceit1st@upi&pn=FACEIT1ST&am=499" 
                             alt="Scan UPI QR" 
                             className="qr-code-img"
                           />

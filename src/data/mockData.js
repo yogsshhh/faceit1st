@@ -412,7 +412,7 @@ export const FAQS = [
   },
   {
     question: 'How do I join the live mock session after booking?',
-    answer: 'Once you book, you will immediately receive a calendar invitation and a dedicated Google Meet/Zoom room link via email and in your InterviewForge dashboard.'
+    answer: 'Once you book, you will immediately receive a calendar invitation and a dedicated Google Meet/Zoom room link via email and in your FACEIT1ST dashboard.'
   },
   {
     question: 'Will I get detailed feedback after the mock interview?',

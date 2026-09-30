@@ -13,7 +13,7 @@ export const Footer = () => {
     <footer className="footer-root">
       <div className="container footer-layout">
         <div className="footer-brand-block">
-          <span className="footer-wordmark">INTERVIEWFORGE</span>
+          <span className="footer-wordmark">FACEIT<span style={{ color: 'var(--accent-champagne)' }}>1ST</span></span>
           <p className="footer-tagline-statement">Practice before the pressure is real.</p>
         </div>
 
@@ -21,11 +21,11 @@ export const Footer = () => {
           <button className="footer-link-btn" onClick={() => scrollToSection('companies')}>Companies</button>
           <button className="footer-link-btn" onClick={() => scrollToSection('how-it-works')}>How It Works</button>
           <button className="footer-link-btn" onClick={() => scrollToSection('pricing')}>Pricing</button>
-          <a href="mailto:contact@interviewforge.com" className="footer-link-btn">Contact</a>
+          <a href="mailto:contact@faceit1st.com" className="footer-link-btn">Contact</a>
         </nav>
 
         <div className="footer-bottom-copy font-mono">
-          <span>© {new Date().getFullYear()} INTERVIEWFORGE. ALL RIGHTS RESERVED.</span>
+          <span>© {new Date().getFullYear()} FACEIT1ST. ALL RIGHTS RESERVED.</span>
         </div>
       </div>
     </footer>
